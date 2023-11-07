@@ -119,7 +119,7 @@ print("---Penghitungan Penghasilan Kena Pajak (PKP)---\n")
 p = float(input("Masukkan PTKP Anda: Rp"))
 print(f"PTKP: Rp{p:,.0f}")
 pkp = gaji_neto-p
-print(f"PKP: Rp{pkp:,.0f}")
+print(f"PKP: Rp{pkp:,.0f}", "\n")
 
 print(f"Nilai Maks. Lapisan ke-1: 60,000,000")
 print(f"Nilai Maks. Lapisan ke-2: 250,000,000")
