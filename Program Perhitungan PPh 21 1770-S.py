@@ -128,10 +128,14 @@ print(f"Nilai Maks. Lapisan ke-4: 5,000,000,000\n")
 
 print("---ALOKASI TARIF PROGRESIF---\n")
 number_1 = float(input("Masukkan PKP: Rp"))
-number_2 = float(input("Nilai Maks. Lapisan ke-1: Rp"))
-number_3 = float(input("Nilai Maks. Lapisan ke-2: Rp"))
-number_4 = float(input("Nilai Maks. Lapisan ke-3: Rp"))
-number_5 = float(input("Nilai Maks. Lapisan ke-4: Rp"))
+number_2 = int(60000000)
+number_3 = int(250000000)
+number_4 = int(500000000)
+number_5 = int(5000000000)
+# number_2 = float(input("Nilai Maks. Lapisan ke-1: Rp"))
+# number_3 = float(input("Nilai Maks. Lapisan ke-2: Rp"))
+# number_4 = float(input("Nilai Maks. Lapisan ke-3: Rp"))
+# number_5 = float(input("Nilai Maks. Lapisan ke-4: Rp"))
 print(" ")
 
 
@@ -141,18 +145,39 @@ if pkp >= number_1 :
 elif pkp < number_2:
     print(f"Nilai untuk lapisan ke-1: Rp{pkp:,.0f}")
 
-
 hasil_alokasi_1 = number_1 - number_2
-print(f"Nilai untuk lapisan ke-2: Rp{hasil_alokasi_1:,.0f}")
+if hasil_alokasi_1 >= number_3:
+    print(f"Nilai untuk lapisan ke-2: Rp{number_3:,.0f}")
+elif hasil_alokasi_1 < number_3:
+    print(f"Nilai untuk lapisan ke-2: Rp{hasil_alokasi_1:,.0f}")
 
-hasil_alokasi_2 = number_2 - number_3
-print(f"Nilai untuk lapisan ke-3: Rp{hasil_alokasi_2:,.0f}")
+hasil_alokasi_2 = hasil_alokasi_1 - number_3
+if hasil_alokasi_2 >= number_4:
+    print(f"Nilai untuk lapisan ke-3: Rp{number_4:,.0f}")
+elif hasil_alokasi_2 < number_4:
+    print(f"Nilai untuk lapisan ke-3: Rp{hasil_alokasi_2:,.0f}")
 
-hasil_alokasi_3 = number_3 - number_4
-print(f"Nilai untuk lapisan ke-4: Rp{hasil_alokasi_2:,.0f}")
+hasil_alokasi_3 = hasil_alokasi_2 - number_4
+if hasil_alokasi_3 >= number_5:
+    print(f"Nilai untuk lapisan ke-4: Rp{number_5:,.0f}")
+elif hasil_alokasi_2 < number_5:
+    print(f"Nilai untuk lapisan ke-4: Rp{hasil_alokasi_3:,.0f}")
 
-hasil_alokasi_4 = number_5 - 0
-print(f"Nilai untuk lapisan ke-5: Rp{hasil_alokasi_2:,.0f}", "\n")
+hasil_alokasi_4 = hasil_alokasi_3 - number_5
+print(f"Nilai untuk lapisan ke-5: Rp{hasil_alokasi_4:,.0f}")
+
+
+# hasil_alokasi_1 = number_1 - number_2
+# print(f"Nilai untuk lapisan ke-2: Rp{hasil_alokasi_1:,.0f}")
+
+# hasil_alokasi_2 = number_2 - number_3
+# print(f"Nilai untuk lapisan ke-3: Rp{hasil_alokasi_2:,.0f}")
+
+# hasil_alokasi_3 = number_3 - number_4
+# print(f"Nilai untuk lapisan ke-4: Rp{hasil_alokasi_2:,.0f}")
+
+# hasil_alokasi_4 = number_5 - 0
+# print(f"Nilai untuk lapisan ke-5: Rp{hasil_alokasi_2:,.0f}", "\n")
 
 print(f"*Note = Jika nilainya negatif(minus) tidak masuk ke tarif progresif\n\n")
 
