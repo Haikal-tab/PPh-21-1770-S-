@@ -259,6 +259,4 @@ print(f"Pajak Terutang per Tahun: Rp{hasil_pajak:,.0f}", "\n")
 
 print("#ayobayarpajak!")
 
-print("CREATED BY: MUHAMMAD HAIKAL MUTHAHHARI")
-
 v = input("Selesai")
